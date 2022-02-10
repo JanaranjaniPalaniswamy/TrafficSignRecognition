@@ -7,7 +7,9 @@ In this project, I will show you how to use PyTorch to classify traffic signs an
 
 The model is designed using Spatial Transformer Network with a modified version of IDSIA networks and trained with heavily augmented data. The models reaches about 99.3% test set accuracy
 
-My attempt to tackle this problem can be read in [report](https://medium.com/@wolfapple/traffic-sign-recognition-2b0c3835e104).
+I made a study on the existing architecture with and without STN model. Visualized the activation layer of CNN and used confusion matrix to assess the model performance.
+
+My attempt to tackle this problem can be read in [report](https://github.com/JanaranjaniPalaniswamy/TrafficSignRecognition/blob/main/Experiment_Results.pptx)
 
 ## Configure and Manage Your Environment with Anaconda
 
@@ -112,16 +114,16 @@ The GTSRB dataset (German Traffic Sign Recognition Benchmark) is provided by the
 
 ## Training and validating model
 
-Run the script train.py to train the model.
+Run the script train.ipynb to train the model.
 
   ```sh
-  python train.py
+  python train.ipynb
   ```
 
 You can include one or more command line arguments.
 
   ```sh
-  python train.py --help
+  python train.ipynb --help
   ```
 
 Various training options can be confirmed with the following command.
@@ -135,3 +137,10 @@ As the model trains, model checkpoints are saved to model.pt file to the current
   ```
 
 We want to visualize the output of the spatial transformers layer after the training, we visualize a batch of input images and the corresponding transformed batch using STN. Check the generated image file.
+
+## Results
+
+
+Stored the activation maps in the path ./activation
+The trained model aare saved in the root directory --> model_xxx.pt
+
